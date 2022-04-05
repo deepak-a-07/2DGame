@@ -4,8 +4,6 @@ package com.example.a2dgame;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 
-
-
 public class AnimationManager {
     private Animation[] animations;
     private int animationIndex = 0;
@@ -19,9 +17,8 @@ public class AnimationManager {
             if(i == index) {
                 if(!animations[index].isPlaying())
                     animations[i].play();
-            }
-            else
-                animations[1].stop();
+            } else
+                animations[i].stop();
         }
         animationIndex = index;
     }
@@ -35,5 +32,6 @@ public class AnimationManager {
         if(animations[animationIndex].isPlaying())
             animations[animationIndex].update();
     }
-
 }
+
+
